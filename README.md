@@ -6,22 +6,46 @@
 creating a template.py file for generating the project structure 
 - current project structure
 ```
-- config
-    - config.yaml
-- src
-  - components
-  - utils
-  - constants
-  - config
-- template
-  - index.html
-- .gitignore
-- main.py
-- template.py
-- setup.py
-- requirements.txt
-- params.yaml
-- Readme.md
+project/
+│
+├── config/
+│   └── config.yaml
+│
+├── src/
+│   ├── __init__.py
+│   │
+│   ├── components/
+│   │   └── __init__.py
+│   │
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   └── common.py
+│   │
+│   ├── constants/
+│   │   └── __init__.py
+│   │
+│   └── config/
+│       ├── __init__.py
+│       └── configuration.py
+│
+├── templates/
+│   └── index.html
+│
+├── research/
+│   └── trials.ipynb
+│
+├── .github/
+│   └── workflows/
+│       └── .gitkeep
+│
+├── dvc.yaml
+├── params.yaml
+├── requirements.txt
+├── setup.py
+├── README.md
+├── .gitignore
+├── main.py
+└── template.py
 ```
 
 
