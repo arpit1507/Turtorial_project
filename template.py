@@ -1,5 +1,8 @@
 import os 
 from pathlib import Path
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 project_name = "Tutorial_Project"
 
@@ -12,12 +15,15 @@ list_of_files = [
     f"src/{project_name}/config/__init__.py",
     f"src/{project_name}/config/configuration.py",
     f"src/{project_name}/utils/common.py",
+    f"src/{project_name}/constants/__init__.py",
     "config/config.yaml",
     "params.yaml",
     "main.py",
     "requirements.txt",
     ".gitignore",
     "setup.py",
+    "template/index.html"
+
 ]
 
 for file in list_of_files:
@@ -25,6 +31,8 @@ for file in list_of_files:
     if not os.path.exists(file):
         with open(file, "w") as f:
             pass
-        print(f"Created file: {file}")
+        logging.info(f"Created file: {file}")
     else:
-        print(f"File already exists: {file}")
+        logging.info(f"File already exists: {file}")
+
+

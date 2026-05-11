@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: Tutorial_Project
+Version: 0.0.1
+Summary: A small python package for MLflow tutorial
+Home-page: https://github.com/Arpit1507/Turtorial_project
+Author: Arpit1507
+Author-email: agrawal.arpit03@nmims.edu.in
+Project-URL: Bug Tracker, https://github.com/Arpit1507/Turtorial_project/issues
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+# CI/CD Pipeline and Full end to end project tutorial (replicated)
+
+#### All the Steps in the Project
+
+###### Project Template Creation
+
+###### Project Step and Requirment Installation
+
+###### Logging, Utils and Exception module
+
+###### Project Workflows
+
+###### All component Modular Code Implimentation
+
+###### Training Pipeline
+
+###### MLFlow 
+
+###### DVC
+
+###### Prediction Pipeline and App Creation
+
+###### Docker 
+
+###### Final CI/CD Deployment on AWS
