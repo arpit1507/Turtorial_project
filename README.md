@@ -31,13 +31,6 @@ project/
 ├── templates/
 │   └── index.html
 │
-├── research/
-│   └── trials.ipynb
-│
-├── .github/
-│   └── workflows/
-│       └── .gitkeep
-│
 ├── dvc.yaml
 ├── params.yaml
 ├── requirements.txt
