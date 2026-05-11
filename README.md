@@ -1,23 +1,25 @@
-# All the Steps in the Project
+# CI/CD Pipeline and Full end to end project tutorial (replicated)
 
-## Project Template Creation
+#### All the Steps in the Project
 
-## Project Step and Requirment Installation
+###### Project Template Creation
 
-## Logging, Utils and Exception module
+###### Project Step and Requirment Installation
 
-## Project Workflows
+###### Logging, Utils and Exception module
 
-## All component Modular Code Implimentation
+###### Project Workflows
 
-## Training Pipeline
+###### All component Modular Code Implimentation
 
-## MLFlow 
+###### Training Pipeline
 
-## DVC
+###### MLFlow 
 
-## Prediction Pipeline and App Creation
+###### DVC
 
-## Docker 
+###### Prediction Pipeline and App Creation
 
-## Final CI/CD Deployment on AWS
+###### Docker 
+
+###### Final CI/CD Deployment on AWS
