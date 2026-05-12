@@ -16,6 +16,9 @@ project/
 │   │
 │   ├── components/
 │   │   └── __init__.py
+|   |
+|   ├── pipeline/
+│   │   └── __init__.py
 │   │
 │   ├── utils/
 │   │   ├── __init__.py
@@ -59,7 +62,9 @@ conda activate tutorial
 pip install -r requirements.txt
 ```
 
-###### Logging, Utils and Exception module
+##### Logging, Utils and Exception module
+For creating a logging system i updated the init file in Tutorial_Project in src folder
+we need to create a message which will decribe the level time and module of each log and we can see every log in the running_logs.txt in logs folder
 
 ###### Project Workflows
 
