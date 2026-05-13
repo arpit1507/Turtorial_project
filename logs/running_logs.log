@@ -1,0 +1,227 @@
+[2026-05-14 00:11:24,228: INFO: main: Starting data ingestion]
+[2026-05-14 00:11:24,229: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 00:11:24,229: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 00:11:24,229: INFO: common: created directory at: artifacts]
+[2026-05-14 00:11:24,229: ERROR: main: "'ConfigBox' object has no attribute 'data_ingestion'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'data_ingestion'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_ingestion'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'data_ingestion'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_ingestion'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'data_ingestion'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_ingestion'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'data_ingestion'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 7, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_01_data_ingestion.py", line 11, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/config/configuration.py", line 12, in get_data_ingestion_config
+    config= self.config.data_ingestion
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_ingestion'"
+[2026-05-14 00:17:33,124: INFO: main: Starting data ingestion]
+[2026-05-14 00:17:33,125: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 00:17:33,126: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 00:17:33,126: INFO: common: created directory at: artifacts]
+[2026-05-14 00:17:33,126: INFO: common: created directory at: artifacts/ingested]
+[2026-05-14 00:17:33,126: ERROR: main: "'ConfigBox' object has no attribute 'source_url'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'source_URL'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'source_URL'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'source_URL'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'source_URL'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 7, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_01_data_ingestion.py", line 11, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/config/configuration.py", line 19, in get_data_ingestion_config
+    source_URL=config.source_URL,
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'source_url'"
+[2026-05-14 00:17:55,767: INFO: main: Starting data ingestion]
+[2026-05-14 00:17:55,767: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 00:17:55,768: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 00:17:55,768: INFO: common: created directory at: artifacts]
+[2026-05-14 00:17:55,768: INFO: common: created directory at: artifacts/ingested]
+[2026-05-14 00:17:55,768: ERROR: main: 'module' object is not callable]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 7, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_01_data_ingestion.py", line 12, in main
+    data_ingestion= DataIngestion(config=data_ingestion_config)
+TypeError: 'module' object is not callable
+[2026-05-14 00:19:14,569: INFO: main: Starting data ingestion]
+[2026-05-14 00:19:14,570: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 00:19:14,570: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 00:19:14,570: INFO: common: created directory at: artifacts]
+[2026-05-14 00:19:14,570: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-14 00:19:14,570: ERROR: main: 'module' object is not callable]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 7, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_01_data_ingestion.py", line 12, in main
+    data_ingestion= DataIngestion(config=data_ingestion_config)
+TypeError: 'module' object is not callable
+[2026-05-14 00:21:03,276: INFO: main: Starting data ingestion]
+[2026-05-14 00:21:03,277: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 00:21:03,278: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 00:21:03,278: INFO: common: created directory at: artifacts]
+[2026-05-14 00:21:03,278: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-14 00:21:03,278: ERROR: main: 'module' object is not callable]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 7, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion= DataIngestion(config=data_ingestion_config)
+TypeError: 'module' object is not callable
+[2026-05-14 00:24:13,692: INFO: main: Starting data ingestion]
+[2026-05-14 00:24:13,693: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 00:24:13,693: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 00:24:13,693: INFO: common: created directory at: artifacts]
+[2026-05-14 00:24:13,693: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-14 00:24:13,694: INFO: DataIngestion: Downloading data from https://drive.google.com/file/d/14qh1UV11XXQkERCVULEvHoQ1WlD0_ISx/view?usp=sharing into file artifacts/ingested/data.zip]
+[2026-05-14 00:24:15,712: ERROR: main: [Errno 2] No such file or directory: 'artifacts/ingested']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 7, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion.download_file()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/components/DataIngestion.py", line 29, in download_file
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/components/DataIngestion.py", line 24, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/gdown/download.py", line 310, in download
+    for file in os.listdir(osp.dirname(output) or "."):
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/ingested'
+[2026-05-14 00:26:01,052: INFO: main: Starting data ingestion]
+[2026-05-14 00:26:01,054: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 00:26:01,054: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 00:26:01,054: INFO: common: created directory at: artifacts]
+[2026-05-14 00:26:01,054: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-14 00:26:01,054: INFO: DataIngestion: Downloading data from https://drive.google.com/file/d/14qh1UV11XXQkERCVULEvHoQ1WlD0_ISx/view?usp=sharing into file artifacts/ingested/data.zip]
+[2026-05-14 00:26:03,532: ERROR: main: [Errno 2] No such file or directory: 'artifacts/ingested']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 7, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion.download_file()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/components/DataIngestion.py", line 29, in download_file
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/components/DataIngestion.py", line 24, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/gdown/download.py", line 310, in download
+    for file in os.listdir(osp.dirname(output) or "."):
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/ingested'
+[2026-05-14 00:27:31,520: INFO: main: Starting data ingestion]
+[2026-05-14 00:27:31,521: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 00:27:31,521: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 00:27:31,521: INFO: common: created directory at: artifacts]
+[2026-05-14 00:27:31,521: INFO: common: created directory at: artifacts/ingested]
+[2026-05-14 00:27:31,521: INFO: DataIngestion: Downloading data from https://drive.google.com/file/d/14qh1UV11XXQkERCVULEvHoQ1WlD0_ISx/view?usp=sharing into file artifacts/ingested/data.zip]
+[2026-05-14 00:29:23,427: INFO: DataIngestion: Downloaded data from https://drive.google.com/file/d/14qh1UV11XXQkERCVULEvHoQ1WlD0_ISx/view?usp=sharing into file artifacts/ingested/data.zip]
+[2026-05-14 00:29:24,138: INFO: main: Completed data ingestion]
