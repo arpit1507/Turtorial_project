@@ -63,10 +63,21 @@ pip install -r requirements.txt
 ```
 
 ##### Logging, Utils and Exception module
-For creating a logging system i updated the init file in Tutorial_Project in src folder
+For creating a logging system i updated the init file in Tutorial_Project in src folder.
 we need to create a message which will decribe the level time and module of each log and we can see every log in the running_logs.txt in logs folder
 
 ###### Project Workflows
+```
+1. Update config.yaml
+2. Update params.yaml
+3. Update the entity
+4. Update the configuration manager in src config
+5. Update the components
+6. Update the pipeline
+7. Update the main.py
+8. Update the dvc.yaml
+9. app.py
+```
 
 ###### All component Modular Code Implimentation
 
