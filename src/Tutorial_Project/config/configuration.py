@@ -1,6 +1,6 @@
 from src.Tutorial_Project.utils.common import read_yaml, create_directories
 from src.Tutorial_Project.constants import *
-from src.Tutorial_Project.entity.config_entity import DataIngestionConfig
+from src.Tutorial_Project.entity.config_entity import (DataIngestionConfig, BaseModelConfig)
 import os
 
 class ConfigurationManager:
@@ -22,3 +22,21 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+
+    def get_prepared_base_model_config(self) -> BaseModelConfig:
+        config = self.config.Prepare_Base_Model
+        params = self.params
+        create_directories([config.root_dir])
+        
+        prepared_base_model_config = BaseModelConfig(
+            root_dir=config.root_dir,
+            base_model_path=config.base_model_path,
+            updated_base_model_path=config.updated_base_model_path,
+            params_image_size=params.IMAGE_SIZE,
+            params_learning_rate=params.LEARNING_RATE,
+            params_classes=params.CLASSES,
+            params_weights=params.WEIGHTS,
+            params_include_top=params.INCLUDE_TOP
+        )
+    
+        return prepared_base_model_config

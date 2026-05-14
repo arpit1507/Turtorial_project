@@ -225,3 +225,69 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/ingested'
 [2026-05-14 00:27:31,521: INFO: DataIngestion: Downloading data from https://drive.google.com/file/d/14qh1UV11XXQkERCVULEvHoQ1WlD0_ISx/view?usp=sharing into file artifacts/ingested/data.zip]
 [2026-05-14 00:29:23,427: INFO: DataIngestion: Downloaded data from https://drive.google.com/file/d/14qh1UV11XXQkERCVULEvHoQ1WlD0_ISx/view?usp=sharing into file artifacts/ingested/data.zip]
 [2026-05-14 00:29:24,138: INFO: main: Completed data ingestion]
+[2026-05-14 10:24:51,056: INFO: main: Starting data ingestion]
+[2026-05-14 10:24:51,058: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 10:24:51,059: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 10:24:51,059: INFO: common: created directory at: artifacts]
+[2026-05-14 10:24:51,059: INFO: common: created directory at: artifacts/ingested]
+[2026-05-14 10:24:51,059: INFO: DataIngestion: Downloading data from https://drive.google.com/file/d/14qh1UV11XXQkERCVULEvHoQ1WlD0_ISx/view?usp=sharing into file artifacts/ingested/data.zip]
+[2026-05-14 10:30:52,315: INFO: DataIngestion: Downloaded data from https://drive.google.com/file/d/14qh1UV11XXQkERCVULEvHoQ1WlD0_ISx/view?usp=sharing into file artifacts/ingested/data.zip]
+[2026-05-14 10:30:53,494: INFO: main: Completed data ingestion]
+[2026-05-14 10:30:53,495: INFO: main: Starting base model preparation]
+[2026-05-14 10:30:53,499: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 10:30:53,506: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 10:30:53,507: INFO: common: created directory at: artifacts]
+[2026-05-14 10:30:53,508: INFO: common: created directory at: artifacts/prepared_base_model]
+[2026-05-14 10:30:54,180: ERROR: main: save_model() missing 1 required positional argument: 'self']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 16, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_02_Prepared_Base_Model.py", line 17, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_02_Prepared_Base_Model.py", line 14, in main
+    prepared_base_model.get_base_model()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/components/PreparedBaseModel.py", line 27, in get_base_model
+    self.save_model(path=self.config.base_model_path, model=self.model)
+TypeError: save_model() missing 1 required positional argument: 'self'
+[2026-05-14 10:32:15,576: INFO: main: Starting base model preparation]
+[2026-05-14 10:32:15,578: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 10:32:15,579: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 10:32:15,579: INFO: common: created directory at: artifacts]
+[2026-05-14 10:32:15,579: INFO: common: created directory at: artifacts/prepared_base_model]
+[2026-05-14 10:32:15,954: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-05-14 10:32:16,122: ERROR: main: _prepared_full_model() missing 1 required positional argument: 'self']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 18, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_02_Prepared_Base_Model.py", line 17, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_02_Prepared_Base_Model.py", line 15, in main
+    prepared_base_model.update_base_model()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/components/PreparedBaseModel.py", line 54, in update_base_model
+    self.full_model = self._prepared_full_model(
+TypeError: _prepared_full_model() missing 1 required positional argument: 'self'
+[2026-05-14 10:33:37,386: INFO: main: Starting base model preparation]
+[2026-05-14 10:33:37,388: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 10:33:37,389: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 10:33:37,389: INFO: common: created directory at: artifacts]
+[2026-05-14 10:33:37,389: INFO: common: created directory at: artifacts/prepared_base_model]
+[2026-05-14 10:33:37,767: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-05-14 10:33:37,944: ERROR: main: _prepared_full_model() missing 1 required positional argument: 'model']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 18, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_02_Prepared_Base_Model.py", line 17, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_02_Prepared_Base_Model.py", line 15, in main
+    prepared_base_model.update_base_model()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/components/PreparedBaseModel.py", line 54, in update_base_model
+    self.full_model = self._prepared_full_model(
+TypeError: _prepared_full_model() missing 1 required positional argument: 'model'
+[2026-05-14 10:33:54,333: INFO: main: Starting base model preparation]
+[2026-05-14 10:33:54,334: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 10:33:54,335: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 10:33:54,336: INFO: common: created directory at: artifacts]
+[2026-05-14 10:33:54,336: INFO: common: created directory at: artifacts/prepared_base_model]
+[2026-05-14 10:33:54,700: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-05-14 10:33:54,797: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-14 10:33:55,012: INFO: main: Completed base model preparation]
