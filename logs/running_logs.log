@@ -291,3 +291,276 @@ TypeError: _prepared_full_model() missing 1 required positional argument: 'model
 [2026-05-14 10:33:54,700: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
 [2026-05-14 10:33:54,797: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
 [2026-05-14 10:33:55,012: INFO: main: Completed base model preparation]
+[2026-05-14 12:34:37,110: INFO: main: Starting model training]
+[2026-05-14 12:34:37,112: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 12:34:37,113: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 12:34:37,113: INFO: common: created directory at: artifacts]
+[2026-05-14 12:34:37,113: ERROR: main: 'ConfigurationManager' object has no attribute 'get_model_training_config']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 28, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 18, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 12, in main
+    model_training_config = config.get_model_training_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_model_training_config'
+[2026-05-14 12:35:42,839: INFO: main: Starting model training]
+[2026-05-14 12:35:42,842: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 12:35:42,843: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 12:35:42,843: INFO: common: created directory at: artifacts]
+[2026-05-14 12:35:42,843: ERROR: main: "'ConfigBox' object has no attribute 'root_dir'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'root_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'root_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 28, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 18, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 12, in main
+    model_training_config = config.get_training_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/config/configuration.py", line 47, in get_training_config
+    create_directories([config.root_dir])
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root_dir'"
+[2026-05-14 12:36:48,003: INFO: main: Starting model training]
+[2026-05-14 12:36:48,007: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 12:36:48,008: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 12:36:48,008: INFO: common: created directory at: artifacts]
+[2026-05-14 12:36:48,008: ERROR: main: "'ConfigBox' object has no attribute 'root_dir'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'root_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'root_dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'root_dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 28, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 18, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 12, in main
+    model_training_config = config.get_training_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/config/configuration.py", line 47, in get_training_config
+    create_directories([config.root_dir])
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root_dir'"
+[2026-05-14 12:37:44,067: INFO: main: Starting model training]
+[2026-05-14 12:37:44,072: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 12:37:44,073: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 12:37:44,073: INFO: common: created directory at: artifacts]
+[2026-05-14 12:37:44,073: INFO: common: created directory at: artifacts/training]
+[2026-05-14 12:37:44,073: ERROR: main: "'ConfigBox' object has no attribute 'training_data'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'training_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'training_data'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'training_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'training_data'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'training_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'training_data'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'training_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 28, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 18, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 12, in main
+    model_training_config = config.get_training_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/config/configuration.py", line 53, in get_training_config
+    training_data=config.Training.training_data,
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'training_data'"
+[2026-05-14 12:39:11,850: INFO: main: Starting model training]
+[2026-05-14 12:39:11,853: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 12:39:11,854: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 12:39:11,854: INFO: common: created directory at: artifacts]
+[2026-05-14 12:39:11,854: INFO: common: created directory at: artifacts/training]
+[2026-05-14 12:39:12,188: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-14 12:39:12,213: ERROR: main: 'Training' object has no attribute 'train_valid_generator']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 28, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 18, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 15, in main
+    model_training.train_valid_generator()
+AttributeError: 'Training' object has no attribute 'train_valid_generator'
+[2026-05-14 12:39:52,735: INFO: main: Starting model training]
+[2026-05-14 12:39:52,737: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 12:39:52,738: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 12:39:52,738: INFO: common: created directory at: artifacts]
+[2026-05-14 12:39:52,739: INFO: common: created directory at: artifacts/training]
+[2026-05-14 12:39:53,016: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-14 12:39:53,068: ERROR: main: train() missing 1 required positional argument: 'callback_list']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 28, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 18, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_03_Training.py", line 16, in main
+    model_training.train()
+TypeError: train() missing 1 required positional argument: 'callback_list'
+[2026-05-14 12:40:49,032: INFO: main: Starting model training]
+[2026-05-14 12:40:49,035: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-14 12:40:49,036: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-14 12:40:49,036: INFO: common: created directory at: artifacts]
+[2026-05-14 12:40:49,036: INFO: common: created directory at: artifacts/training]
+[2026-05-14 12:40:49,317: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-14 13:14:29,007: INFO: main: Completed model training]
