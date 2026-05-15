@@ -564,3 +564,33 @@ TypeError: train() missing 1 required positional argument: 'callback_list'
 [2026-05-14 12:40:49,036: INFO: common: created directory at: artifacts/training]
 [2026-05-14 12:40:49,317: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
 [2026-05-14 13:14:29,007: INFO: main: Completed model training]
+[2026-05-15 10:25:13,393: INFO: main: Starting model evaluation]
+[2026-05-15 10:25:13,395: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-15 10:25:13,396: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-15 10:25:13,396: INFO: common: created directory at: artifacts]
+[2026-05-15 10:25:13,638: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-15 10:25:13,682: ERROR: main: [Errno 2] No such file or directory: 'artifacts/ingested/Data/trining']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/main.py", line 38, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_04_Mlflow_integeration.py", line 18, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/stage_04_Mlflow_integeration.py", line 14, in main
+    evaluation.evaluation()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/components/Mlflow.py", line 47, in evaluation
+    self._valid_generator()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/components/Mlflow.py", line 32, in _valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/preprocessing/image.py", line 1649, in flow_from_directory
+    return DirectoryIterator(
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/preprocessing/image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/ingested/Data/trining'
+[2026-05-15 10:26:08,262: INFO: main: Starting model evaluation]
+[2026-05-15 10:26:08,264: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-15 10:26:08,265: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-15 10:26:08,265: INFO: common: created directory at: artifacts]
+[2026-05-15 10:26:08,539: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-15 10:26:23,865: INFO: common: json file: scores.json saved successfully]
+[2026-05-15 10:26:23,865: INFO: common: json file: scores.json saved successfully]
+[2026-05-15 10:26:23,865: INFO: main: Completed model evaluation]
