@@ -594,3 +594,221 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/ingested/Data
 [2026-05-15 10:26:23,865: INFO: common: json file: scores.json saved successfully]
 [2026-05-15 10:26:23,865: INFO: common: json file: scores.json saved successfully]
 [2026-05-15 10:26:23,865: INFO: main: Completed model evaluation]
+[2026-05-15 10:57:33,311: INFO: stage_01_data_ingestion: Starting data ingestion]
+[2026-05-15 10:57:33,315: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-15 10:57:33,315: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-15 10:57:33,315: INFO: common: created directory at: artifacts]
+[2026-05-15 10:57:33,316: INFO: common: created directory at: artifacts/ingested]
+[2026-05-15 10:57:33,316: INFO: DataIngestion: Downloading data from https://drive.google.com/file/d/14qh1UV11XXQkERCVULEvHoQ1WlD0_ISx/view?usp=sharing into file artifacts/ingested/data.zip]
+[2026-05-15 10:59:18,892: INFO: DataIngestion: Downloaded data from https://drive.google.com/file/d/14qh1UV11XXQkERCVULEvHoQ1WlD0_ISx/view?usp=sharing into file artifacts/ingested/data.zip]
+[2026-05-15 10:59:19,637: INFO: stage_01_data_ingestion: Completed data ingestion]
+[2026-05-15 10:59:25,573: INFO: stage_02_Prepared_Base_Model: Starting base model preparation]
+[2026-05-15 10:59:25,575: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-15 10:59:25,576: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-15 10:59:25,576: INFO: common: created directory at: artifacts]
+[2026-05-15 10:59:25,576: INFO: common: created directory at: artifacts/prepared_base_model]
+[2026-05-15 10:59:25,861: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-05-15 10:59:25,943: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-15 10:59:26,027: INFO: stage_02_Prepared_Base_Model: Completed base model preparation]
+[2026-05-15 11:00:45,617: INFO: stage_03_Training: Starting model training]
+[2026-05-15 11:00:45,620: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-15 11:00:45,621: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-15 11:00:45,621: INFO: common: created directory at: artifacts]
+[2026-05-15 11:00:45,621: INFO: common: created directory at: artifacts/training]
+[2026-05-15 11:00:45,876: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-15 11:21:55,237: INFO: stage_03_Training: Completed model training]
+[2026-05-15 11:22:00,899: INFO: stage_04_Mlflow_integeration: Starting model evaluation]
+[2026-05-15 11:22:00,900: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-15 11:22:00,901: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-15 11:22:00,901: INFO: common: created directory at: artifacts]
+[2026-05-15 11:22:01,051: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-15 11:22:18,500: INFO: common: json file: scores.json saved successfully]
+[2026-05-15 11:22:18,501: INFO: common: json file: scores.json saved successfully]
+[2026-05-15 11:22:18,502: INFO: stage_04_Mlflow_integeration: Completed model evaluation]
+[2026-05-15 11:36:20,415: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.2.116:8080]
+[2026-05-15 11:36:20,416: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-05-15 11:36:29,094: ERROR: app: Exception on / [GET]]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/app.py", line 25, in home
+    return render_template('index.html')
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+[2026-05-15 11:36:29,117: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:36:29] "[35m[1mGET / HTTP/1.1[0m" 500 -]
+[2026-05-15 11:36:31,547: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:36:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2026-05-15 11:36:41,694: ERROR: app: Exception on / [GET]]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/app.py", line 25, in home
+    return render_template('index.html')
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+[2026-05-15 11:36:41,697: INFO: _internal: 127.0.0.1 - - [15/May/2026 11:36:41] "[35m[1mGET / HTTP/1.1[0m" 500 -]
+[2026-05-15 11:36:42,122: INFO: _internal: 127.0.0.1 - - [15/May/2026 11:36:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2026-05-15 11:37:44,842: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.2.116:8080]
+[2026-05-15 11:37:44,842: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-05-15 11:37:50,111: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:37:50] "GET / HTTP/1.1" 200 -]
+[2026-05-15 11:38:47,876: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/prediction.py", line 11, in predict
+    model= load_model(os.path.join("artifacts","model","full_model.h5"))
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/saving/saving_api.py", line 262, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/saving/legacy/save.py", line 234, in load_model
+    raise IOError(
+OSError: No file or directory found at artifacts/model/full_model.h5
+[2026-05-15 11:38:47,885: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:38:47] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2026-05-15 11:41:48,934: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.2.116:8080]
+[2026-05-15 11:41:48,934: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-05-15 11:41:56,948: INFO: _internal: 127.0.0.1 - - [15/May/2026 11:41:56] "GET / HTTP/1.1" 200 -]
+[2026-05-15 11:42:16,738: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/prediction.py", line 11, in predict
+    model= load_model(os.path.join("artifacts","model","model.h5"))
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/saving/saving_api.py", line 262, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/saving/legacy/save.py", line 234, in load_model
+    raise IOError(
+OSError: No file or directory found at artifacts/model/model.h5
+[2026-05-15 11:42:16,749: INFO: _internal: 127.0.0.1 - - [15/May/2026 11:42:16] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2026-05-15 11:42:54,081: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.2.116:8080]
+[2026-05-15 11:42:54,081: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-05-15 11:43:01,617: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:43:01] "GET / HTTP/1.1" 200 -]
+[2026-05-15 11:43:08,613: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/src/Tutorial_Project/pipeline/prediction.py", line 11, in predict
+    model= load_model(os.path.join("/Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/artifacts","model","model.h5"))
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/saving/saving_api.py", line 262, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/Users/arpitagrawal/miniconda3/envs/Tutorial/lib/python3.9/site-packages/keras/src/saving/legacy/save.py", line 234, in load_model
+    raise IOError(
+OSError: No file or directory found at /Users/arpitagrawal/Desktop/Resume Projects/Tutorial_Project/artifacts/model/model.h5
+[2026-05-15 11:43:08,627: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:43:08] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2026-05-15 11:44:20,436: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.2.116:8080]
+[2026-05-15 11:44:20,437: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-05-15 11:44:29,758: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:44:29] "GET / HTTP/1.1" 200 -]
+[2026-05-15 11:44:34,648: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-15 11:44:35,102: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:44:35] "POST /predict HTTP/1.1" 200 -]
+[2026-05-15 11:45:13,590: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-15 11:45:13,917: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:45:13] "POST /predict HTTP/1.1" 200 -]
+[2026-05-15 11:45:21,168: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-15 11:45:21,359: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:45:21] "POST /predict HTTP/1.1" 200 -]
+[2026-05-15 11:47:19,768: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.2.116:8080]
+[2026-05-15 11:47:19,771: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-05-15 11:47:24,973: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:47:24] "GET / HTTP/1.1" 200 -]
+[2026-05-15 11:47:31,162: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2026-05-15 11:47:31,586: INFO: _internal: 192.168.2.116 - - [15/May/2026 11:47:31] "POST /predict HTTP/1.1" 200 -]

@@ -1,6 +1,6 @@
-from src.Tutorial_Project.utils.common import read_yaml, create_directories
-from src.Tutorial_Project.constants import *
-from src.Tutorial_Project.entity.config_entity import (DataIngestionConfig, BaseModelConfig,TrainingConfig,EvaluationConfig)
+from Tutorial_Project.utils.common import read_yaml, create_directories
+from Tutorial_Project.constants import *
+from Tutorial_Project.entity.config_entity import (DataIngestionConfig, BaseModelConfig,TrainingConfig,EvaluationConfig)
 import os
 
 class ConfigurationManager:

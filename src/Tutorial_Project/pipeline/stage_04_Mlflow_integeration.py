@@ -1,6 +1,6 @@
-from src.Tutorial_Project.config.configuration import ConfigurationManager
-from src.Tutorial_Project.components.Mlflow import Evaluation
-from src.Tutorial_Project import logger
+from Tutorial_Project.config.configuration import ConfigurationManager
+from Tutorial_Project.components.Mlflow import Evaluation
+from Tutorial_Project import logger
 
 class EvaluationPipeline:
     def __init__(self):

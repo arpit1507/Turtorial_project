@@ -1,6 +1,6 @@
-from src.Tutorial_Project.config.configuration import ConfigurationManager
-from src.Tutorial_Project.components.PreparedBaseModel import PreparedBaseModel
-from src.Tutorial_Project import logger
+from Tutorial_Project.config.configuration import ConfigurationManager
+from Tutorial_Project.components.PreparedBaseModel import PreparedBaseModel
+from Tutorial_Project import logger
 
 class BaseModelPreparationPipeline:
     def __init__(self):
@@ -25,6 +25,6 @@ if __name__ == "__main__":
         logger.info("Completed base model preparation")
     except Exception as e:
         logger.exception(e)
-        
+
         
 

@@ -1,6 +1,6 @@
-from src.Tutorial_Project.config.configuration import ConfigurationManager
-from src.Tutorial_Project.components.ModelTraining import Training
-from src.Tutorial_Project import logger
+from Tutorial_Project.config.configuration import ConfigurationManager
+from Tutorial_Project.components.ModelTraining import Training
+from Tutorial_Project import logger
 
 class ModelTrainingPipeline:
     def __init__(self):

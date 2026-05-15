@@ -1,6 +1,6 @@
-from src.Tutorial_Project.config.configuration import ConfigurationManager
-from src.Tutorial_Project.components.DataIngestion import DataIngestion
-from src.Tutorial_Project import logger
+from Tutorial_Project.config.configuration import ConfigurationManager
+from Tutorial_Project.components.DataIngestion import DataIngestion
+from Tutorial_Project import logger
 
 class DataIngestionPipeline:
     def __init__(self):

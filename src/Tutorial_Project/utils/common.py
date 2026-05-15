@@ -49,7 +49,7 @@ def get_size(path: Path) -> str:
     size_in_kb = round(os.path.getsize(path) / 1024, 2)
     return f"{size_in_kb} KB"
 
-def decode_image(imgstring,filepath):
+def decodeImage(imgstring,filepath):
     imgdata=base64.b64decode(imgstring)
     with open(filepath, "wb") as f:
         f.write(imgdata)

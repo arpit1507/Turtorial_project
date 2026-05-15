@@ -1,9 +1,9 @@
 import os
 import zipfile
 import gdown
-from src.Tutorial_Project import logger
-from src.Tutorial_Project.utils.common import get_size
-from src.Tutorial_Project.entity.config_entity import (BaseModelConfig)
+from Tutorial_Project import logger
+from Tutorial_Project.utils.common import get_size
+from Tutorial_Project.entity.config_entity import (BaseModelConfig)
 import tensorflow as tf
 from pathlib import Path
 
