@@ -1,6 +1,6 @@
 FROM python:3.9  
 
-RUN apt-get update -y && apt install awscli -y
+RUN apt-get update -y && apt-get install -y awscli
 WORKDIR /app
 
 COPY . /app
