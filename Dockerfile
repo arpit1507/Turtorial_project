@@ -1,30 +1,11 @@
-FROM python:3.9-slim
+FROM python:3.9-slim-buster
 
-# Prevent Python from writing pyc files
-ENV PYTHONDONTWRITEBYTECODE=1
-
-# Prevent Python from buffering stdout/stderr
-ENV PYTHONUNBUFFERED=1
+RUN apt update -y && apt install awscli -y
 
 WORKDIR /app
 
-# Install system dependencies only if needed
-RUN apt-get update && apt-get install -y \
-    gcc \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
+COPY . /app
 
-# Copy requirements first for Docker cache optimization
-COPY requirements.txt .
+RUN pip install -r requirements.txt
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy application code
-COPY . .
-
-# Expose application port
-EXPOSE 8080
-
-# Run application
-CMD ["python", "app.py"]
+CMD ["python3", "app.py"]
