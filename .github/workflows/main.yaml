@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'README.md'
+      - "README.md"
 
 permissions:
   id-token: write
@@ -29,7 +29,7 @@ jobs:
 
 
   build-and-push-ecr-image:
-    name: Continuous Delivery
+    name: Build and Push Docker Image
     needs: integration
     runs-on: ubuntu-latest
 
@@ -37,13 +37,8 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Install Utilities
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y jq unzip
-
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -53,18 +48,17 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      - name: Build Docker Image
+      - name: Build Docker image
         run: |
           docker build -t tutorial_project .
 
-      - name: Tag Docker Image
+      - name: Tag Docker image
         run: |
           docker tag tutorial_project:latest 576415573436.dkr.ecr.eu-north-1.amazonaws.com/tutorial_project:latest
 
-      - name: Push Docker Image
+      - name: Push Docker image to ECR
         run: |
           docker push 576415573436.dkr.ecr.eu-north-1.amazonaws.com/tutorial_project:latest
-
 
 
   Continuous-Deployment:
@@ -73,11 +67,11 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -87,7 +81,7 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      - name: Pull latest image
+      - name: Pull latest Docker image
         run: |
           docker pull 576415573436.dkr.ecr.eu-north-1.amazonaws.com/tutorial_project:latest
 
@@ -98,13 +92,14 @@ jobs:
 
       - name: Run Docker container
         run: |
-          docker run -d -p 8080:8080 \
-          --name cnncls \
-          -e AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} \
-          -e AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
-          -e AWS_REGION=eu-north-1 \
-          576415573436.dkr.ecr.eu-north-1.amazonaws.com/tutorial_project:latest
+          docker run -d \
+            -p 8080:8080 \
+            --name cnncls \
+            -e AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} \
+            -e AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
+            -e AWS_REGION=eu-north-1 \
+            576415573436.dkr.ecr.eu-north-1.amazonaws.com/tutorial_project:latest
 
-      - name: Clean old Docker images
+      - name: Clean unused Docker resources
         run: |
           docker system prune -f
